@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_scope :user do
+    get '/' => 'devise/sessions#new'
+  end
   get 'public_recipes/', to: 'public_recipes#index'
   get 'general_shopping_list/', to: 'general_shopping_list#index'
   get 'general_shopping_list/new'
@@ -19,5 +22,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  root to: 'devise/sessions#new'
+  
 end
