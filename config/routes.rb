@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  devise_scope :user do
-    get '/' => 'devise/sessions#new'
-  end
+  # devise_scope :user do
+  #   get '/' => 'devise/sessions#new'
+  # end
+  get '/', to: 'foods#index'
   get 'public_recipes/', to: 'public_recipes#index'
   get 'general_shopping_list/', to: 'general_shopping_list#index'
   get 'general_shopping_list/new'
