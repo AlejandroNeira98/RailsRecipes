@@ -1,5 +1,21 @@
 <h1>Foods#index</h1>
-
-<% @foods.each do |food|%>
-  <span><%= food.name %> </span> <span><%= food.measurement_unit %>  </span> <span> <%= food.price %> </span> <span> Delete </span>
-<% end%>
+<%= stylesheet_link_tag "foodsindex" %>
+<%= link_to "<button>Add Food</button>".html_safe, foods_new_path %>
+<table>
+  <tr>
+    <th>Food</th>
+    <th>Measurement Unit</th>
+    <th>Unit price</th>
+    <th>Actions</th>
+  </tr>
+  <% @foods.each do |food|%>
+  <span> </span> <span>  </span> <span>  </span> <span> Delete </span>
+  <tr>
+    <td><%= food.name %></td>
+    <td><%= food.measurement_unit %></td>
+    <td><%= food.price %></td>
+    <td>Delete</td>
+  </tr>
+  <% end%>
+  
+</table>

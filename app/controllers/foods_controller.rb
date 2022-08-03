@@ -11,7 +11,10 @@ class FoodsController < ApplicationController
 
   def new; end
 
-  def create; end
+  def create
+    food = Food.new(params[:food])
+    redirect_to foods_path if food.create
+  end
 
   def destroy; end
 end
