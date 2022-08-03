@@ -2,7 +2,11 @@
 
 class FoodsController < ApplicationController
   def index
-    @foods = current_user.foods
+    if current_user
+      @foods = current_user.foods
+    else 
+      redirect_to new_user_session_path
+    end
   end
 
   def new; end
