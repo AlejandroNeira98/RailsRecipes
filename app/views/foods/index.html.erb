@@ -9,12 +9,11 @@
     <th>Actions</th>
   </tr>
   <% @foods.each do |food|%>
-  <span> </span> <span>  </span> <span>  </span> <span> Delete </span>
   <tr>
     <td><%= food.name %></td>
     <td><%= food.measurement_unit %></td>
     <td><%= food.price %></td>
-    <td>Delete</td>
+    <td><%= button_to 'Delete', {:controller => "foods", :action => "destroy", :food_id => food.id}, :method=>:delete  %></td>
   </tr>
   <% end%>
   
