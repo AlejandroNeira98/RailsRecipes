@@ -12,8 +12,8 @@ class FoodsController < ApplicationController
   def new; end
 
   def create
-    food = Food.new(name: params[:name], measurement_unit: params[:measurement_unit], price: params[:price], quantity: params[:quantity])
-    redirect_to foods_path if food.create
+    food = Food.new(name: params[:name], measurement_unit: params[:measurement_unit], price: params[:price], quantity: params[:quantity], user_id: current_user.id)
+    redirect_to foods_path if food.save
   end
 
   def destroy
