@@ -12,7 +12,7 @@ class FoodsController < ApplicationController
   def new; end
 
   def create
-    food = Food.new(params[:food])
+    food = Food.new(name: params[:name], measurement_unit: params[:measurement_unit], price: params[:price], quantity: params[:quantity])
     redirect_to foods_path if food.create
   end
 
