@@ -13,6 +13,12 @@
   <body>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+    <ul style="display: flex">
+      <li><%= link_to "Public recipes", public_recipes_path %></li>
+      <li><%= link_to "Shoping list", general_shopping_list_path %></li>
+      <li><%= link_to "My recipes", recipes_path %></li>
+      <li><%= link_to "My food", foods_path %></li>
+    </ul>
     <%= yield %>
   </body>
 </html>
