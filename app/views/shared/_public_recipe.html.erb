@@ -1,0 +1,25 @@
+<div>
+  <div>
+
+    <div>
+      <%= recipe.name %>
+    </div> 
+    <div>
+      By: <%= recipe.user.name %>
+    </div>
+
+  </div>
+
+  <div>
+    <div>
+      Total food items: <%= recipe.recipe_foods.size %>
+    </div>
+    <div>
+    <% total = 0 %>
+      <% recipe.recipe_foods.each do |recipe_foods| %>
+      <% total += (recipe_foods.quantity * recipe_foods.food.price) %>
+      <% end %>
+      Total price: <%= total %>
+    </div>
+  </div>
+</div>
