@@ -12,3 +12,5 @@ Metrics/CyclomaticComplexity:
   Enabled: false
 Style/IfUnlessModifier:
   Enabled: false
+Metrics/AbcSize:
+  Enabled: false
