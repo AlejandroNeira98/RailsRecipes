@@ -1,24 +1,40 @@
-# README
+# Rails Recipes
+Rails Recipes is an app which can contain lists of recipes and the food required and create a shopping list of foods needed. Users can register to add recipes and login to view their private recipes.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built with:
+ * Ruby on Rails
+ * PostgreSQL
+ * CSS
+ * HTML5
 
-Things you may want to cover:
+## Prerequisites
+* Ruby V3+, 
+* Rails V7+
+* Postgresql
 
-* Ruby version
 
-* System dependencies
+## Setup
+* Clone the Github Repository
+* Go to the Project Directory
+* Run bundle install
+* Create a .env file and copy the content from .env.example file. Assign the values to username and password according to your DB credentials.
 
-* Configuration
+## Usage
+* Run `rails server` or `rails s` to start the server and start the application.
 
-* Database creation
+## Authors
+👤 **Alejandro Neira**
+- GitHub: [@AlejandroNeira98](https://github.com/AlejandroNeira98)
+- Twitter: [@JANP_19](https://twitter.com/JANP_19)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/alejandro-neira-pachon/) 
 
-* Database initialization
 
-* How to run the test suite
+👤 **Chris Clothier**
+- LinkedIn: [@chris](https://www.linkedin.com/in/crclothier/)
+- Github: [@chris](https://github.com/CRClothier) 
 
-* Services (job queues, cache servers, search engines, etc.)
+## Acknowledgments
+ * Microverse
 
-* Deployment instructions
-
-* ...
+## 📝License
+* This project is MIT licensed.
