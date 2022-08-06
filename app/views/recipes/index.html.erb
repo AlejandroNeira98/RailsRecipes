@@ -1,2 +1,11 @@
 <h1>Recipes#index</h1>
-<p>Find me in app/views/recipes/index.html.erb</p>
+<%= link_to "<button>Add Recipe</button>".html_safe, recipes_new_path %>
+  <% @recipes.each do |recipe|%>
+  <div>
+    <a href="recipes/<%=recipe.id%>"><h2><%= recipe.name %></h2></a>
+    <p><%= recipe.description %></p>
+    <%= button_to 'Remove', {:controller => "recipes", :action => "destroy", :recipe_id => recipe.id}, :method=>:delete  %>
+  </div>
+  <% end%>
+  
+</table>
