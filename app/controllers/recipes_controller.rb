@@ -18,5 +18,9 @@ class RecipesController < ApplicationController
 
   def destroy; end
 
-  def show; end
+  def show
+    @recipe = Recipe.find(params[:id])
+    @recipe_foods = RecipeFood.where(recipe_id: @recipe.id)
+    @foods = Food.where(id: @recipe_foods)
+  end
 end
