@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag "foodsindex" %>
+<h1>Shopping List</h1>
+<div>
+  <p> Amount of food items to buy: <%= @food_to_buy.size%> </p>
+  <p> Total value of food needed: $<%= @total_cost %>
+</div>
+
+<table>
+  <tr>
+    <th>Food</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+  <% @food_to_buy.each do |food|%>
+    <tr>
+      <td><%= food.name %></td>
+      <td><%= food.quantity %></td>
+      <td><%= food.price %></td>
+    </tr>
+  <% end%>
+  
+</table>

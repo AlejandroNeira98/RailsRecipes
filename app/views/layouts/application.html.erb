@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsRecipes</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+    <% if current_user %>
+      <ul style="display: flex">
+        <li><%= link_to "Public recipes", public_recipes_path %></li>
+        <li><%= link_to "Shoping list", general_shopping_list_path %></li>
+        <li><%= link_to "My recipes", recipes_path %></li>
+        <li><%= link_to "My food", foods_path %></li>
+      </ul>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>
