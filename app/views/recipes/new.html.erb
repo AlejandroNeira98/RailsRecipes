@@ -1,2 +1,14 @@
 <h1>Recipes#new</h1>
 <p>Find me in app/views/recipes/new.html.erb</p>
+
+<%= form_with model: @recipe, url: recipes_create_path, method: :post do |form| %>
+  <%= form.label :name, "Recipe's name" %>
+  <%= form.text_field :name %>
+  <%= form.label :preparation_time, "Preparation Time" %>
+  <%= form.text_field :preparation_time %>
+  <%= form.label :cooking_time, "Cooking time" %>
+  <%= form.text_field :cooking_time %>
+  <%= form.label :description, "Description" %>
+  <%= form.text_field :description %>
+  <%= form.submit "Add Recipe"%>
+<% end %>
